@@ -1,4 +1,4 @@
-# Dept Website – React UI APpp
+# Dept Website – React UI App
 
 A modern, scalable React UI inspired by the **DEPT® agency website**.  
 This project demonstrates **clean component architecture**, **configurable layouts**, and **production-ready SCSS styling** using reusable React components.
