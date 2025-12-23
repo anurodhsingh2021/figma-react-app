@@ -1,0 +1,60 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 64px;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  align-items: center;
+  padding: 0 32px;
+  z-index: 1000;
+  justify-content: space-between;
+
+  &_logo {
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
+  &_links_contianer {
+    display: flex;
+    flex-direction: row;
+  }
+  &_links {
+    display: flex;
+    gap: 28px;
+
+    a {
+      font-size: 13px;
+      letter-spacing: 1px;
+      color: $gray;
+      transition: color 0.3s;
+
+      &.active,
+      &:hover {
+        color: $white;
+      }
+    }
+
+    @include mobile {
+      display: none;
+    }
+  }
+
+  /* 3 DOT MENU */
+  &_menu {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-left: 20px;
+
+    span {
+      width: 4px;
+      height: 4px;
+      background: $white;
+      border-radius: 50%;
+    }
+  }
+}

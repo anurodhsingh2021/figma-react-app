@@ -1,0 +1,7 @@
+@import '../../styles/mixins';
+
+.main {
+  @include mobile {
+    width: 100vh;
+  }
+}

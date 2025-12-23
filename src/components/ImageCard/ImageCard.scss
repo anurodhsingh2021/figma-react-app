@@ -1,0 +1,29 @@
+.image-card {
+  position: relative;
+  height: 420px;
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  cursor: pointer;
+
+  &_content {
+    position: absolute;
+    bottom: 24px;
+    left: 24px;
+
+    span {
+      font-size: 12px;
+      opacity: 0.7;
+    }
+
+    h3 {
+      font-size: 22px;
+      margin: 8px 0;
+    }
+
+    small {
+      font-size: 12px;
+      opacity: 0.6;
+    }
+  }
+}

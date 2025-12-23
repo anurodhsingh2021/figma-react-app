@@ -1,0 +1,45 @@
+@import '../../styles/variables';
+
+.drawer {
+  position: fixed;
+  inset: 0;
+  background: #000;
+  z-index: 2000;
+  transform: translateX(100%);
+  transition: transform 0.4s ease;
+  display: flex;
+  flex-direction: column;
+
+  &.open {
+    transform: translateX(0);
+  }
+
+  &_close {
+    align-self: flex-end;
+    padding: 24px;
+    font-size: 20px;
+    color: $white;
+  }
+
+  &_nav {
+    margin-top: 80px;
+    padding: 0 48px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+
+    a {
+      font-size: 28px;
+      font-weight: 500;
+      letter-spacing: 1px;
+      color: $white;
+      opacity: 0.9;
+      border-bottom: 1px solid;
+      text-align: end;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+}

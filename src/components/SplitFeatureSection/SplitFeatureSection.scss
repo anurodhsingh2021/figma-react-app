@@ -1,0 +1,111 @@
+@import '../../styles/mixins';
+
+.split-feature {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  min-height: 560px;
+  background: #000;
+  color: #fff;
+
+  &__text {
+    padding: 48px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    background: #000;
+  }
+
+  &__item {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    padding-bottom: 16px;
+
+    h4 {
+      font-size: 12px;
+      letter-spacing: 1px;
+      margin-bottom: 8px;
+      opacity: 0.8;
+    }
+
+    p {
+      font-size: 14px;
+      line-height: 1.6;
+      opacity: 0.7;
+    }
+
+    span {
+      display: inline-block;
+      margin-top: 6px;
+      font-size: 12px;
+      opacity: 0.6;
+    }
+  }
+
+  &__image {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+  }
+
+  &__overlay {
+    position: absolute;
+    bottom: 32px;
+    left: 32px;
+    max-width: 520px;
+
+    small {
+      font-size: 11px;
+      letter-spacing: 1px;
+      opacity: 0.7;
+    }
+
+    h2 {
+      font-size: 32px;
+      line-height: 1.2;
+      margin: 12px 0;
+    }
+
+    span {
+      font-size: 12px;
+      opacity: 0.6;
+    }
+  }
+
+  /* RIGHT TEXT VARIANT */
+  &.right {
+    grid-template-columns: 2fr 1fr;
+
+    .split-feature__text {
+      order: 2;
+    }
+
+    .split-feature__image {
+      order: 1;
+    }
+  }
+
+  /* MOBILE */
+  @include mobile {
+    grid-template-columns: 1fr;
+
+    &.right {
+      grid-template-columns: 1fr;
+    }
+
+    &__text {
+      padding: 32px 24px;
+    }
+
+    &__image {
+      min-height: 320px;
+    }
+
+    &__overlay {
+      left: 24px;
+      bottom: 24px;
+
+      h2 {
+        font-size: 22px;
+      }
+    }
+  }
+}
