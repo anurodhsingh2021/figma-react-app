@@ -1,4 +1,3 @@
-import Navbar from '../../components/Navbar/Navbar';
 import HeroBanner from '../../components/HeroBanner/HeroBanner';
 import SectionHeader from '../../components/SectionHeader/SectionHeader';
 import CardGrid from '../../components/CardGrid/CardGrid';
@@ -34,7 +33,6 @@ import logo12 from '../../assets/images/logo12.png';
 const Home = () => {
   return (
     <div className='main'>
-      <Navbar />
       <HeroBanner
         image={heroImage}
         title="A selection of projects that pioneer tech"
