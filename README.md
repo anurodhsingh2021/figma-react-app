@@ -25,7 +25,7 @@ node -v
 npm -v
 ```
 
-## Setup, Run & Build
+## Setup, Run, Build Test
 
 ### 📥 Clone the Repository
 
@@ -50,6 +50,18 @@ npm run dev
 
 ```
 npm run build
+```
+
+## 🧪 Test Cases
+
+### ▶️ Running Tests
+```
+npm run test
+```
+
+### 📋 Coverage
+```
+npm run test:coverage
 ```
 
 ## ♿ Accessibility (a11y)
