@@ -50,42 +50,68 @@ const ContactForm = () => {
     <section className="contact">
       <div className="contact_text">
         <h2>QUESTION?</h2>
-        <h2>
-          WE ARE HERE TO HELP!
-        </h2>
+        <h2>WE ARE HERE TO HELP!</h2>
       </div>
 
-      <form className="contact_form" onSubmit={handleSubmit} noValidate>
+      <form
+        className="contact_form"
+        onSubmit={handleSubmit}
+        noValidate
+        aria-live="polite"
+      >
         <div className="contact_input_row">
           <div className="contact_row">
+            <label htmlFor="name">Name</label>
             <input
+              id="name"
               name="name"
-              placeholder="Name"
               value={form.name}
               onChange={handleChange}
+              aria-invalid={!!errors.name}
+              aria-describedby={errors.name ? 'name-error' : undefined}
             />
-            {errors.name && <small>{errors.name}</small>}
+            {errors.name && (
+              <small id="name-error" role="alert">
+                {errors.name}
+              </small>
+            )}
           </div>
 
           <div className="contact_row">
+            <label htmlFor="email">Email</label>
             <input
+              id="email"
               name="email"
-              placeholder="Email"
+              type="email"
               value={form.email}
               onChange={handleChange}
+              aria-invalid={!!errors.email}
+              aria-describedby={errors.email ? 'email-error' : undefined}
             />
-            {errors.email && <small>{errors.email}</small>}
+            {errors.email && (
+              <small id="email-error" role="alert">
+                {errors.email}
+              </small>
+            )}
           </div>
         </div>
+
         <div className="contact_row">
+          <label htmlFor="message">Message</label>
           <textarea
+            id="message"
             name="message"
-            placeholder="Message"
             rows={4}
             value={form.message}
             onChange={handleChange}
+            aria-invalid={!!errors.message}
+            aria-describedby={errors.message ? 'message-error' : undefined}
           />
-          {errors.message && <small>{errors.message}</small>}
+          {errors.message && (
+            <small id="message-error" role="alert">
+              {errors.message}
+            </small>
+          )}
         </div>
 
         <button type="submit">SEND</button>

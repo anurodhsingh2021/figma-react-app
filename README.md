@@ -11,6 +11,71 @@ This project demonstrates **clean component architecture**, **configurable layou
 - **Vite / CRA**
 - **ESLint & Prettier** (optional)
 
+## ✅ Prerequisites
+
+Ensure the following are installed:
+
+- **Node.js** `v18+`
+- **npm** `v9+` or **yarn**
+- **Git**
+
+Check versions:
+```bash
+node -v
+npm -v
+```
+
+## Setup, Run & Build
+
+### 📥 Clone the Repository
+
+```
+https://github.com/anurodhsingh2021/figma-react-app.git
+cd figma-react-app
+```
+
+### 📦 Step 2: Install Dependencies
+
+```
+npm install
+```
+
+### ▶️ Step 3: Run the App (Development)
+
+```
+npm run dev
+```
+
+### 🏗 Step 4: Build the App (Production)
+
+```
+npm run build
+```
+
+## ♿ Accessibility (a11y)
+
+This project follows **WCAG 2.1 accessibility best practices** to ensure usability for all users.
+
+### ✅ Accessibility Features Implemented
+
+- **Semantic HTML**
+  - Proper usage of `<nav>`, `<header>`, `<main>`, `<section>`, `<footer>`
+- **ARIA attributes**
+  - `aria-label`, `aria-expanded`, `aria-controls` for interactive elements
+- **Keyboard Navigation**
+  - All buttons and links are accessible via `Tab`
+  - Drawer menu can be opened and closed using keyboard
+- **Focus Management**
+  - Focus is trapped inside the drawer when open
+  - Focus returns to trigger element on close
+- **Accessible Forms**
+  - Labels linked with inputs using `htmlFor`
+  - Error messages announced using `aria-live`
+- **Color Contrast**
+  - Text contrast meets WCAG AA standards
+- **Alt Text**
+  - All images include descriptive `alt` attributes
+
 ## 📁 Folder Structure
 ```
 src/
@@ -105,45 +170,4 @@ interface SplitFeatureProps {
     description: string;
   }[];
 }
-```
-
-## ✅ Prerequisites
-
-Ensure the following are installed:
-
-- **Node.js** `v18+`
-- **npm** `v9+` or **yarn**
-- **Git**
-
-Check versions:
-```bash
-node -v
-npm -v
-```
-
-## Setup, Run & Build
-
-### 📥 Clone the Repository
-
-```
-https://github.com/anurodhsingh2021/figma-react-app.git
-cd figma-react-app
-```
-
-### 📦 Step 2: Install Dependencies
-
-```
-npm install
-```
-
-### ▶️ Step 3: Run the App (Development)
-
-```
-npm run dev
-```
-
-### 🏗 Step 4: Build the App (Production)
-
-```
-npm run build
 ```
